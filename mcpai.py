@@ -57,7 +57,7 @@ def analyze_with_gpt(website_data):
 
     return response["choices"][0]["message"]["content"]
 
-def generate_pdf_report(issues, filename="website_audit_report.pdf"):
+def generate_pdf_report(issues, filename="wwebsite_audit_report.pdf"):
     """Generates a PDF report listing all detected issues."""
     c = canvas.Canvas(filename)
     c.drawString(100, 750, "📌 Website Audit Report")
@@ -92,7 +92,7 @@ agent = initialize_agent(
 )
 
 # Run the AI Agent
-website_url = "https://www.nike.com/in/"
+website_url = "https://www.adidas.co.in/"
 website_data = crawl_website(website_url)
 issues = analyze_with_gpt(website_data)
 
